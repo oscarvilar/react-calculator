@@ -1,10 +1,15 @@
 import React from 'react'
 import './screen.css'
+import { useRecoilState } from 'recoil';
+import numState from '../../atoms/atom';
 
 const Screen = () => {
+
+  const [number] = useRecoilState(numState);
+
   return (
     <div className='screen'>
-      <div className='top-screen'>0</div>
+      <div className='top-screen'>{number}</div>
       <div className='bottom-screen'>0</div>
     </div>
   )
