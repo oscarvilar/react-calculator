@@ -1,0 +1,24 @@
+.key {
+    background-color: #d7e7fa;
+    width: 50px;
+    height: 50px;
+    border: 0.1px solid #80808030;
+}
+
+.last-row{
+    display: flex;
+}
+
+.last-row .key:nth-child(3){
+    background-color: #a1c5f1;
+    flex-grow: 2;
+    border-bottom-right-radius:15px;
+}
+
+.last-row .key:nth-child(1){
+    border-bottom-left-radius:15px;
+}
+
+.key:nth-child(4){
+    background-color: #c2d6ef;
+}
