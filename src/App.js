@@ -9,6 +9,7 @@ function App() {
         <Screen/>
         <Keys/>
       </div>
+      <p>*Proyecto realizado para practicar con React.js y Recoil</p>
     </div>
   );
 }
