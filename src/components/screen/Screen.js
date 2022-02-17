@@ -10,7 +10,6 @@ const Screen = () => {
   return (
     <div className='screen'>
       <div className='top-screen'>{number}</div>
-      <div className='bottom-screen'>0</div>
     </div>
   )
 }

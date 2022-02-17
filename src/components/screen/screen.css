@@ -1,21 +1,21 @@
 .screen{
-    height: 70px;
+    height: 110px;
     background-color: #595c81;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: end;justify-content: center;
 }
 
 .top-screen{
     color: white;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 30px;
+    padding: 10px;
 }
 
-.bottom-screen{
-color: white;
-font-size: 30px;
-padding: 5px;
-}
+/* .bottom-screen{
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+} */
