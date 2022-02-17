@@ -22,3 +22,7 @@
 .key:nth-child(4){
     background-color: #c2d6ef;
 }
+
+.key:active{
+    background-color: rgb(50, 136, 248);
+}

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './keys.css'
 import numState from '../../atoms/atom'
 import { useRecoilState } from 'recoil'
@@ -7,18 +7,26 @@ const Keys = () => {
 
     const [number, setNumber] = useRecoilState(numState);
     
-    // const [result, setResult] = useState("");
-
     const handleClick = (e) =>{
         setNumber(number.concat(e.target.name));
+    }
+    const clear = () =>{
+        setNumber('');
+    }
+
+    const deleteLastInput = () =>{
+        setNumber(number.slice(0, -1));
+    }
+    const calculate = () =>{
+        setNumber(eval(number).toString());
     }
     
 
   return (
     <div className='keyboard'>
         <div className="row">
-            <button className='key'  name='C' onClick={handleClick}>C</button>
-            <button className='key'  name='+-' onClick={handleClick}>+-</button>
+            <button className='key'  name='Clear' onClick={clear}>Clear</button>
+            <button className='key'  name='C' onClick={deleteLastInput}>C</button>
             <button className='key'  name='%' onClick={handleClick}>%</button>
             <button className='key'  name='/' onClick={handleClick}>/</button>
         </div>
@@ -43,7 +51,7 @@ const Keys = () => {
         <div className="last-row">
             <button className='key' name='0' onClick={handleClick}>0</button>
             <button className='key'name='.' onClick={handleClick}>.</button>
-            <button className='key' name='=' onClick={handleClick}>=</button>
+            <button className='key' name='=' onClick={calculate}>=</button>
         </div>
     </div>
   )
